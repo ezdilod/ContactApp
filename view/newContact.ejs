@@ -1,0 +1,26 @@
+<%- include("header") %>
+    <h1>Neuer Eintrag</h1>
+    <form action="/newContact" method="post">
+        <label>
+            Vorname
+            <input type="text" name="Vorname" required>
+        </label>
+        <label>
+            Nachname
+            <input type="text" name="Nachname" required>
+        </label>
+        <label>
+            PLZ
+            <input type="text" name="PLZ" required>
+        </label>
+        <label>
+            Stadt
+            <input type="text" name="Stadt" required>
+        </label>
+        <label>
+            Straße
+            <input type="text" name="Straße" required>
+        </label>
+        <input type="submit" value="Anlegen" required>
+    </form>
+    <%- include("footer") %>

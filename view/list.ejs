@@ -1,0 +1,49 @@
+<%- include("header") %>
+    <h1>Kontakte</h1>
+    <h2>Einträge: <%= data.length %>
+    </h2>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <!-- id is not visible for now -->
+                    <!-- <th>ID</th> -->
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>PLZ</th>
+                    <th>Stadt</th>
+                    <th>Straße</th>
+                    <th><a class="newContact" href="newContact">Neu</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let contact of data) { %>
+                    <tr>
+                        <!-- id is not visible for now -->
+                        <!--   <td>
+                            <%= contact.id %>
+                        </td> -->
+                        <td>
+                            <%= contact.Vorname %>
+                        </td>
+                        <td>
+                            <%= contact.Nachname %>
+                        </td>
+                        <td>
+                            <%= contact.PLZ %>
+                        </td>
+                        <td>
+                            <%= contact.Stadt %>
+                        </td>
+                        <td>
+                            <%= contact.Straße %>
+                        </td>
+                        <td><a href="/editContact/<%= contact.id %>">Bearbeiten</a>
+                            <a href="/delete/<%= contact.id %>">Löschen</a>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+    <%- include("footer") %>

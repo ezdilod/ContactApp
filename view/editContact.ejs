@@ -1,0 +1,31 @@
+<%- include("header") %>
+    <h1>Eintrag bearbeiten</h1>
+    <form action="/editContact/<%= data.id %>" method="post">
+        <label>
+            Vorname
+            <input type="text" name="Vorname" value="<%=
+data.Vorname %>">
+        </label>
+        <label>
+            Nachname
+            <input type="text" name="Nachname" value="<%= data.Nachname
+%>">
+        </label>
+        <label>
+            PLZ
+            <input type="text" name="PLZ" value="<%= data.PLZ
+        %>">
+        </label>
+        <label>
+            Stadt
+            <input type="text" name="Stadt" value="<%= data.Stadt
+            %>">
+        </label>
+        <label>
+            Straße
+            <input type="text" name="Straße" value="<%= data.Straße
+                %>">
+        </label>
+        <input type="submit" value="Ändern">
+    </form>
+    <%- include("footer") %>
